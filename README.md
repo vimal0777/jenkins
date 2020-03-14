@@ -14,12 +14,14 @@ We will be using open java, Get latest version from http://openjdk.java.net/inst
 ```sh
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
-
+```
+Lets install java.
+```sh
 sudo apt-get install openjdk-8-jdk
 ```
 
-### Confirm Java Version
-Lets install java and set the java home
+# Confirm Java Version
+
 ```sh
 java -version
 ```
@@ -32,13 +34,13 @@ OpenJDK Runtime Environment (build 1.8.0_151-b12)
 OpenJDK 64-Bit Server VM (build 25.151-b12, mixed mode)
 ```
 
-find a java jvm path 
+find a java jvm path and set the java home
 ```sh
 find /usr/lib/jvm/java-1.8* | head -n 3 
 ``` 
 above command execution will displays a path like (```sh /usr/lib/jvm/java-1.8.0-openjdk-amd64```) and copy that displays path 
 
-## Edit Bash Profile with vim editor
+# Edit Bash Profile with vim editor
 ```sh
 vi .bashrc
 ```
