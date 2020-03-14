@@ -54,7 +54,7 @@ export PATH
 save and exit vim editor
 
 
-#### To set it permanently update your .bash_profile
+#### To set it permanently update your .bashrc
 ```sh
 source ~/.bashrc
 ```
