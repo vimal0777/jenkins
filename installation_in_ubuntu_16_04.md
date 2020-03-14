@@ -130,6 +130,12 @@ OpenSSH (v6)               ALLOW       Anywhere (v6)
 8080 (v6)                  ALLOW       Anywhere (v6)
 ```
 
+#### Note: If the firewall is inactive, the following commands will make sure that OpenSSH is allowed and then enable it.
+```sh
+sudo ufw allow OpenSSH
+sudo ufw enable
+```
+
 #### Accessing Jenkins
 By default jenkins runs at port `8080`, You can access jenkins at
 ```sh
