@@ -99,9 +99,11 @@ systemctl start jenkins
 
 # Setup Jenkins to start at boot,
 systemctl enable jenkins
-```
 
-#### Opening the Firewall
+```
+Now Jenkins is running, we’ll adjust our firewall rules so that we can reach Jenkins from a web browser to complete the initial set up.
+
+### Opening the Firewall
 By default, Jenkins runs on port 8080, so we’ll open that port using ufw:
 ```sh
 sudo ufw allow 8080
