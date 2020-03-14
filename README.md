@@ -69,7 +69,7 @@ echo $PATH
 The version of Jenkins included with the default Ubuntu packages is often behind the latest available version from the project itself. In order to take advantage of the latest fixes and features, we’ll use the project-maintained packages to install Jenkins.
 
 Following steps are used;
-#Step 1. We’ll add the repository key to the system.
+#### Step 1. We’ll add the repository key to the system.
 
 ```sh
 wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
