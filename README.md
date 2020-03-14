@@ -4,7 +4,7 @@
 
 
 ### Prerequisites
-1. EC2 Ubuntu Server 16.04 LTS  Instance [Get help here](https://www.youtube.com/watch?v=KDtS6BzJo3A)
+1. EC2 Ubuntu Server 16.04 LTS  Instance.
    - With Internet Access
    - Security Group with Port `8080` open for internet
 1. Java v1.8.x 
@@ -22,31 +22,6 @@ sudo apt-get install openjdk-8-jdk
 Lets install java and set the java home
 ```sh
 java -version
-find /usr/lib/jvm/java-1.8* | head -n 3 
-``` 
-above command execution will displays a path like (```sh /usr/lib/jvm/java-1.8.0-openjdk-amd64```) and copy that displays path 
-
-## Edit Bash Profile in vim editor
-```sh
-vi .bashrc
-```
-edit
-
-```sh
-JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
-PATH=$PATH:$JAVA_HOME:$HOME/bin
-
-export PATH
-
-# To set it permanently update your .bash_profile
-source ~/.bashrc
-```
-
-Check path by executing below command
-```sh
-echo $JAVA_HOME
-echo $PATH
-
 ```
 
 _The output should be something like this,_
@@ -57,18 +32,63 @@ OpenJDK Runtime Environment (build 1.8.0_151-b12)
 OpenJDK 64-Bit Server VM (build 25.151-b12, mixed mode)
 ```
 
-## Install Jenkins
-You can install jenkins using the rpm or by setting up the repo. We will setup the repo so that we can update it easily in future.
-Get latest version of jenkins from https://pkg.jenkins.io/redhat-stable/
+find a java jvm path 
 ```sh
-sudo apt-get install wget
+find /usr/lib/jvm/java-1.8* | head -n 3 
+``` 
+above command execution will displays a path like (```sh /usr/lib/jvm/java-1.8.0-openjdk-amd64```) and copy that displays path 
+
+## Edit Bash Profile with vim editor
+```sh
+vi .bashrc
+```
+edit
+
+```sh
+#JAVA_HOME=$PASTE_A_COPIED_PATH
+JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+PATH=$PATH:$JAVA_HOME:$HOME/bin
+
+export PATH
+```
+save and exit vim editor
+
+
+# To set it permanently update your .bash_profile
+```sh
+source ~/.bashrc
+```
+
+Check path by executing below command
+```sh
+echo $JAVA_HOME
+echo $PATH
+```
+
+## Installing Jenkins
+The version of Jenkins included with the default Ubuntu packages is often behind the latest available version from the project itself. In order to take advantage of the latest fixes and features, we’ll use the project-maintained packages to install Jenkins.
+
+Following steps are used;
+#Step 1. We’ll add the repository key to the system.
+
+```sh
 wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+```
+When the key is added, the system will return OK. Next, we’ll append the Debian package repository address to the server’s sources.list:
+
+#Step 2. Add the following entry in your /etc/apt/sources.list
+```sh
 echo deb https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list
+```
+
+Step 3. Now run the following commands:
+```sh
 sudo apt-get update
 
-rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
-yum -y install jenkins
+sudo apt-get install jenkins
 ```
+Now that Jenkins and its dependencies are in place, we’ll start the Jenkins server.
+
 
 ### Start Jenkins
 ```sh
