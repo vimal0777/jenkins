@@ -32,17 +32,17 @@ OpenJDK Runtime Environment (build 1.8.0_151-b12)
 OpenJDK 64-Bit Server VM (build 25.151-b12, mixed mode)
 ```
 
-Find a java jvm path and set the java home
+#### Find a java jvm path and set the java home
 ```sh
 find /usr/lib/jvm/java-1.8* | head -n 3 
 ``` 
 above command execution will displays a path like (```/usr/lib/jvm/java-1.8.0-openjdk-amd64```) and copy that displays path 
 
-Edit Bash Profile with vim editor
+#### Edit Bash Profile with vim editor
 ```sh
 vi .bashrc
 ```
-edit
+#### edit
 
 ```sh
 #JAVA_HOME=$PASTE_A_COPIED_PATH
@@ -54,12 +54,12 @@ export PATH
 save and exit vim editor
 
 
-To set it permanently update your .bash_profile
+#### To set it permanently update your .bash_profile
 ```sh
 source ~/.bashrc
 ```
 
-Check  java home settings by executing below command
+#### Check  java home settings by executing below command
 ```sh
 echo $JAVA_HOME
 echo $PATH
@@ -76,12 +76,12 @@ wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add
 ```
 When the key is added, the system will return OK. Next, we’ll append the Debian package repository address to the server’s sources.list:
 
-#Step 2. Add the following entry in your /etc/apt/sources.list
+#### Step 2. Add the following entry in your /etc/apt/sources.list
 ```sh
 echo deb https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list
 ```
 
-Step 3. Now run the following commands:
+#### Step 3. Now run the following commands:
 ```sh
 sudo apt-get update
 
