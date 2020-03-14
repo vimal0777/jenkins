@@ -1,6 +1,6 @@
 # Install Jenkins on Ubuntu 16.04 
 
-### Public Cloud like Digital Ocean, Vultr,.. 
+### Install in Public Cloud like Digital Ocean, Vultr,.. 
  
  Jenkins is a self-contained Java-based program, ready to run out-of-the-box, with packages for Windows, Mac OS X and other Unix-like operating systems. As an extensible automation server, Jenkins can be used as a simple CI server or turned into the continuous delivery hub for any project.
 
@@ -8,7 +8,7 @@
 
 ### Prerequisites
 1. Ubuntu Server 16.04 LTS
-   - Instance Greater 1GB-Ram
+   - Instance Greater 1-GB-Ram
       
 1. Java v1.8.x 
 
