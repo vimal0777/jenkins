@@ -5,7 +5,7 @@
 
 ### Prerequisites
 1. Ubuntu Server 16.04 LTS
-   - >1GB Ram
+   - Instance Greater 1GB Ram
       
 1. Java v1.8.x 
 
