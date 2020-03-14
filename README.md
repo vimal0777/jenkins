@@ -18,7 +18,7 @@ sudo apt-get update
 sudo apt-get install openjdk-8-jdk
 ```
 
-### Confirm Java Version
+#### Confirm Java Version
 
 ```sh
 java -version
