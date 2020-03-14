@@ -24,7 +24,7 @@ sudo apt-get install openjdk-8-jdk
 java -version
 ```
 
-_The output should be something like this,_
+####_The output should be something like this,_
 ```
 [root@~]# java -version
 openjdk version "1.8.0_151"
