@@ -95,10 +95,10 @@ Now that Jenkins and its dependencies are in place, we’ll start the Jenkins se
 
 ```sh
 # Start jenkins service
-systemctl start jenkins
+sudo systemctl start jenkins
 
 # Setup Jenkins to start at boot,
-systemctl enable jenkins
+sudo systemctl enable jenkins
 
 ```
 Now Jenkins is running, we’ll adjust our firewall rules so that we can reach Jenkins from a web browser to complete the initial set up.
