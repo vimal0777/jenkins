@@ -5,7 +5,7 @@
 
 ### Prerequisites
 1. EC2 Ubuntu Server 16.04 LTS  Instance.
-   - > 1GB Ram (t2.micro)
+   - instance greater 1GB Ram (t2.micro)
    - Security Group with Port `8080` open for internet
 1. Java v1.8.x 
 
